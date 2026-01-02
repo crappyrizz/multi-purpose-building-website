@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym - Multipurpose Commercial Building</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gym.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MultiBuild</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose-us">Why Choose Us</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="gym-hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>PREMIUM FITNESS EXPERIENCE</h1>
+                <p>State-of-the-art facility with cutting-edge equipment and expert training</p>
+                <div class="cta-buttons">
+                    <a href="#book-tour" class="cta-primary">Book Tour</a>
+                    <a href="#membership" class="cta-secondary">View Membership Plans</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES GRID -->
+    <section class="gym-features">
+        <div class="container">
+            <h2>Our Facilities</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏋️</div>
+                    <h3>Olympic Weightlifting Zone</h3>
+                    <p>Professional-grade equipment for serious strength training</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📺</div>
+                    <h3>Cardio Theater</h3>
+                    <p>Individual screens and premium cardio machines</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Functional Training Area</h3>
+                    <p>Dynamic workouts for real-world strength and mobility</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧘</div>
+                    <h3>Recovery Zone</h3>
+                    <p>Massage chairs, stretching areas, and recovery tools</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Group Class Studio</h3>
+                    <p>Yoga, spin, HIIT, and specialized fitness classes</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Personal Training Hub</h3>
+                    <p>One-on-one sessions with certified trainers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEMBERSHIP TIERS -->
+    <section id="membership" class="gym-membership">
+        <div class="container">
+            <h2>Membership Plans</h2>
+            <div class="membership-grid">
+                <div class="membership-card">
+                    <h3>Basic</h3>
+                    <div class="price">$29<span>/month</span></div>
+                    <ul>
+                        <li>Access to gym equipment</li>
+                        <li>Locker room access</li>
+                        <li>Basic amenities</li>
+                    </ul>
+                    <a href="#" class="membership-btn">Choose Plan</a>
+                </div>
+                <div class="membership-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Premium</h3>
+                    <div class="price">$49<span>/month</span></div>
+                    <ul>
+                        <li>Everything in Basic</li>
+                        <li>Unlimited group classes</li>
+                        <li>Recovery zone access</li>
+                        <li>Guest passes</li>
+                    </ul>
+                    <a href="#" class="membership-btn">Choose Plan</a>
+                </div>
+                <div class="membership-card">
+                    <h3>Elite</h3>
+                    <div class="price">$89<span>/month</span></div>
+                    <ul>
+                        <li>Everything in Premium</li>
+                        <li>2 personal training sessions/month</li>
+                        <li>Priority class booking</li>
+                        <li>Nutrition consultation</li>
+                    </ul>
+                    <a href="#" class="membership-btn">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCHEDULE/TIMETABLE -->
+    <section class="gym-schedule">
+        <div class="container">
+            <h2>Class Schedule</h2>
+            <div class="schedule-filters">
+                <button class="filter-btn active">All Classes</button>
+                <button class="filter-btn">HIIT</button>
+                <button class="filter-btn">Yoga</button>
+                <button class="filter-btn">Spin</button>
+                <button class="filter-btn">Strength</button>
+            </div>
+            <div class="schedule-table">
+                <div class="schedule-header">
+                    <div>Time</div>
+                    <div>Monday</div>
+                    <div>Tuesday</div>
+                    <div>Wednesday</div>
+                    <div>Thursday</div>
+                    <div>Friday</div>
+                    <div>Saturday</div>
+                    <div>Sunday</div>
+                </div>
+                <div class="schedule-row">
+                    <div class="time">6:00 AM</div>
+                    <div class="class hiit">HIIT Blast</div>
+                    <div></div>
+                    <div class="class hiit">HIIT Blast</div>
+                    <div></div>
+                    <div class="class hiit">HIIT Blast</div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="schedule-row">
+                    <div class="time">7:00 AM</div>
+                    <div class="class yoga">Morning Yoga</div>
+                    <div class="class spin">Spin Class</div>
+                    <div class="class yoga">Morning Yoga</div>
+                    <div class="class spin">Spin Class</div>
+                    <div class="class yoga">Morning Yoga</div>
+                    <div class="class spin">Spin Class</div>
+                    <div></div>
+                </div>
+                <div class="schedule-row">
+                    <div class="time">12:00 PM</div>
+                    <div></div>
+                    <div class="class strength">Strength Training</div>
+                    <div></div>
+                    <div class="class strength">Strength Training</div>
+                    <div></div>
+                    <div></div>
+                    <div class="class yoga">Afternoon Yoga</div>
+                </div>
+                <div class="schedule-row">
+                    <div class="time">6:00 PM</div>
+                    <div class="class spin">Evening Spin</div>
+                    <div class="class hiit">HIIT Power</div>
+                    <div class="class spin">Evening Spin</div>
+                    <div class="class hiit">HIIT Power</div>
+                    <div class="class spin">Evening Spin</div>
+                    <div class="class hiit">HIIT Power</div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="schedule-actions">
+                <a href="#" class="download-btn">Download Full Schedule</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAINER PROFILES -->
+    <section class="gym-trainers">
+        <div class="container">
+            <h2>Meet Our Trainers</h2>
+            <div class="trainers-carousel">
+                <div class="trainer-card">
+                    <div class="trainer-image"></div>
+                    <h3>Sarah Johnson</h3>
+                    <p>Strength & Conditioning Specialist</p>
+                    <div class="certifications">
+                        <span class="cert">NASM-CPT</span>
+                        <span class="cert">FMS</span>
+                    </div>
+                    <a href="#" class="trainer-btn">Book Session</a>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image"></div>
+                    <h3>Mike Chen</h3>
+                    <p>HIIT & Cardio Expert</p>
+                    <div class="certifications">
+                        <span class="cert">ACSM</span>
+                        <span class="cert">RRCA</span>
+                    </div>
+                    <a href="#" class="trainer-btn">Book Session</a>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image"></div>
+                    <h3>Emily Davis</h3>
+                    <p>Yoga & Mindfulness Coach</p>
+                    <div class="certifications">
+                        <span class="cert">RYT-500</span>
+                        <span class="cert">Meditation</span>
+                    </div>
+                    <a href="#" class="trainer-btn">Book Session</a>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image"></div>
+                    <h3>David Wilson</h3>
+                    <p>Nutrition & Weight Loss</p>
+                    <div class="certifications">
+                        <span class="cert">ISSN</span>
+                        <span class="cert">PN1</span>
+                    </div>
+                    <a href="#" class="trainer-btn">Book Session</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="gym-cta">
+        <div class="container">
+            <h2>Ready to Transform Your Fitness Journey?</h2>
+            <p>Book your free introductory session today and experience the difference</p>
+            <a href="#book-tour" class="cta-final">Book Free Session</a>
+        </div>
+    </section>
+
+    <!-- GYM GALLERY -->
+    <section class="gym-gallery">
+        <div class="container">
+            <div class="gallery-header">
+                <h2>Our Fitness Facility</h2>
+                <div class="title-accent"></div>
+            </div>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="equipment">Equipment</button>
+                <button class="filter-btn" data-filter="classes">Classes</button>
+                <button class="filter-btn" data-filter="amenities">Amenities</button>
+            </div>
+            <div class="gallery-grid">
+                <!-- EQUIPMENT (6 images) -->
+                <div class="gallery-item equipment" data-lightbox="equipment-1" data-title="Olympic Lifting Platform" data-description="Professional Olympic lifting platform with premium barbells and bumper plates for powerlifting and weightlifting training.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Olympic Lifting Platform</h4>
+                        <p>Professional powerlifting equipment</p>
+                    </div>
+                </div>
+                <div class="gallery-item equipment" data-lightbox="equipment-2" data-title="Cardio Theater" data-description="State-of-the-art cardio theater with individual screens and premium cardio machines including treadmills, ellipticals, and stationary bikes.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Cardio Theater</h4>
+                        <p>Individual screens & premium machines</p>
+                    </div>
+                </div>
+                <div class="gallery-item equipment" data-lightbox="equipment-3" data-title="Functional Training Rig" data-description="Multi-station functional training rig with TRX suspension trainers, battle ropes, and resistance bands for full-body functional fitness.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Functional Training Rig</h4>
+                        <p>TRX & battle ropes included</p>
+                    </div>
+                </div>
+                <div class="gallery-item equipment" data-lightbox="equipment-4" data-title="Recovery Area" data-description="Dedicated recovery zone with percussion therapy guns, foam rollers, massage balls, and stretching equipment for optimal muscle recovery.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Recovery Area</h4>
+                        <p>Percussion guns & foam rollers</p>
+                    </div>
+                </div>
+                <div class="gallery-item equipment" data-lightbox="equipment-5" data-title="Selectorized Machines" data-description="Complete lineup of premium selectorized machines including chest press, leg press, lat pulldown, and cable machines with adjustable weight stacks.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Selectorized Machines</h4>
+                        <p>Premium weight stack equipment</p>
+                    </div>
+                </div>
+                <div class="gallery-item equipment" data-lightbox="equipment-6" data-title="Free Weights Area" data-description="Spacious free weights area with natural lighting featuring dumbbells, barbells, weight plates, and squat racks for traditional strength training.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Free Weights Area</h4>
+                        <p>Natural lighting & complete setup</p>
+                    </div>
+                </div>
+
+                <!-- CLASSES (5 images) -->
+                <div class="gallery-item classes" data-lightbox="classes-1" data-title="Spin Class" data-description="High-energy spin class with immersive LED lighting and professional Peloton-style bikes for an unforgettable cardio experience.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Spin Class</h4>
+                        <p>Immersive lighting & premium bikes</p>
+                    </div>
+                </div>
+                <div class="gallery-item classes" data-lightbox="classes-2" data-title="Yoga Studio" data-description="Serene yoga studio with natural light, hardwood floors, and professional yoga mats for mindfulness and flexibility training.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Yoga Studio</h4>
+                        <p>Natural light & hardwood floors</p>
+                    </div>
+                </div>
+                <div class="gallery-item classes" data-lightbox="classes-3" data-title="HIIT Class" data-description="Dynamic HIIT class in action with functional movements, bodyweight exercises, and high-intensity interval training for maximum calorie burn.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>HIIT Class</h4>
+                        <p>High-intensity interval training</p>
+                    </div>
+                </div>
+                <div class="gallery-item classes" data-lightbox="classes-4" data-title="Personal Training" data-description="One-on-one personal training session with certified trainers providing customized fitness programs and form correction.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Personal Training</h4>
+                        <p>One-on-one certified instruction</p>
+                    </div>
+                </div>
+                <div class="gallery-item classes" data-lightbox="classes-5" data-title="Small Group Training" data-description="Intimate small group training sessions with expert coaches focusing on technique, motivation, and group dynamics for optimal results.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Small Group Training</h4>
+                        <p>Expert coaching in small groups</p>
+                    </div>
+                </div>
+
+                <!-- AMENITIES (5 images) -->
+                <div class="gallery-item amenities" data-lightbox="amenities-1" data-title="Modern Locker Room" data-description="Contemporary locker room with wood accents, individual lockers, and modern amenities for member comfort and convenience.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Modern Locker Room</h4>
+                        <p>Wood accents & individual lockers</p>
+                    </div>
+                </div>
+                <div class="gallery-item amenities" data-lightbox="amenities-2" data-title="Supplement Bar" data-description="Wellness supplement bar with smoothie station, protein shakes, and nutritional supplements to support your fitness goals.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Supplement Bar</h4>
+                        <p>Smoothie station & nutrition support</p>
+                    </div>
+                </div>
+                <div class="gallery-item amenities" data-lightbox="amenities-3" data-title="Stretching Area" data-description="Dedicated stretching area with foam rollers, resistance bands, and yoga blocks for proper cool-down and flexibility work.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Stretching Area</h4>
+                        <p>Foam rollers & flexibility equipment</p>
+                    </div>
+                </div>
+                <div class="gallery-item amenities" data-lightbox="amenities-4" data-title="Member Lounge" data-description="Comfortable member lounge with charging stations, WiFi, and relaxation areas for pre and post-workout comfort.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Member Lounge</h4>
+                        <p>Charging stations & relaxation areas</p>
+                    </div>
+                </div>
+                <div class="gallery-item amenities" data-lightbox="amenities-5" data-title="Childcare Area" data-description="Safe and engaging childcare area with age-appropriate activities, toys, and supervision for members with children.">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <h4>Childcare Area</h4>
+                        <p>Safe & engaging environment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox-modal">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title"></h3>
+                <p class="lightbox-description"></p>
+                <div class="lightbox-actions">
+                    <button class="share-btn facebook">Share on Facebook</button>
+                    <button class="share-btn twitter">Share on Twitter</button>
+                    <button class="download-btn">Download High-Res</button>
+                </div>
+            </div>
+            <button class="lightbox-nav lightbox-prev">&larr;</button>
+            <button class="lightbox-nav lightbox-next">&rarr;</button>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2026 Multipurpose Commercial Building. All rights reserved.</p>
+            <p>Contact us: info@multibuild.com | (123) 456-7890</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

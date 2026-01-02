@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multipurpose Commercial Building</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Verve Hub</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose-us">Why Choose Us</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact-location">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Verve Hub</h1>
+            <p>Experience convenience and entertainment in one place. Gym, car wash, gaming area, and restaurant all under one roof.</p>
+            <a href="#services" class="cta-button">Explore Services</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Premium Facilities</h2>
+            <P>Four exceptional services designed to cater to your lifestyle needs, all under one roof</P>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏋️</div>
+                    <h3>Gym</h3>
+                    <p>State-of-the-art fitness equipment and personal training services to help you achieve your health goals.</p>
+                    <a href="gym.html" class="view-details">View Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚗</div>
+                    <h3>Car Wash</h3>
+                    <p>Professional car cleaning services with eco-friendly products for a spotless finish.</p>
+                    <a href="carwash.html" class="view-details">View Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎮</div>
+                    <h3>Gaming Area</h3>
+                    <p>Latest gaming consoles and VR experiences for an immersive entertainment hub.</p>
+                    <a href="gaming.html" class="view-details">View Details</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🍽️</div>
+                    <h3>Restaurant</h3>
+                    <p>Delicious cuisine from around the world, perfect for dining after your workout or gaming session.</p>
+                    <a href="restaurant.html" class="view-details">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VERVE HUB GALLERY -->
+    <section class="verve-gallery">
+        <div class="container">
+            <h2>Explore Our Facilities</h2>
+            <div class="gallery-grid">
+                <!-- TOP ROW -->
+                <div class="gallery-item gym-item" data-service="Gym">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <span class="service-name">Gym</span>
+                    </div>
+                </div>
+                <div class="gallery-item carwash-item" data-service="Car Wash">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=400&h=400&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <span class="service-name">Car Wash</span>
+                    </div>
+                </div>
+                <div class="gallery-item restaurant-item" data-service="Restaurant">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=400&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <span class="service-name">Restaurant</span>
+                    </div>
+                </div>
+                <!-- BOTTOM ROW -->
+                <div class="gallery-item gaming-item" data-service="Gaming">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=400&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <span class="service-name">Gaming</span>
+                    </div>
+                </div>
+                <div class="gallery-item lobby-item" data-service="Lobby">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=400&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <span class="service-name">Lobby</span>
+                    </div>
+                </div>
+                <div class="gallery-item community-item" data-service="Community">
+                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&h=400&fit=crop&crop=center')"></div>
+                    <div class="gallery-overlay">
+                        <span class="service-name">Community</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us" class="why-choose-us">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="reasons-grid">
+                <div class="reason">
+                    <div class="reason-icon">🏢</div>
+                    <h3>All-in-One Convenience</h3>
+                    <p>Experience multiple services in one location, saving you time and effort.</p>
+                </div>
+                <div class="reason">
+                    <div class="reason-icon">⭐</div>
+                    <h3>Premium Quality</h3>
+                    <p>State-of-the-art facilities and equipment for the best experience possible.</p>
+                </div>
+                <div class="reason">
+                    <div class="reason-icon">💰</div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Competitive rates without compromising on quality or service.</p>
+                </div>
+                <div class="reason">
+                    <div class="reason-icon">🕒</div>
+                    <h3>24/7 Access</h3>
+                    <p>Flexible hours to accommodate your schedule and lifestyle needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-grid">
+                <div class="review">
+                    <div class="stars">★★★★★</div>
+                    <p>"This multipurpose building has everything I need! The gym is top-notch and the restaurant has amazing food. Highly recommend!"</p>
+                    <span>- Sarah Johnson</span>
+                </div>
+                <div class="review">
+                    <div class="stars">★★★★★</div>
+                    <p>"Love the gaming area - great selection of games and the car wash is so convenient. One-stop shop for all my needs."</p>
+                    <span>- Mike Chen</span>
+                </div>
+                <div class="review">
+                    <div class="stars">★★★★☆</div>
+                    <p>"Excellent facilities and friendly staff. The variety of services makes it easy to spend the whole day here."</p>
+                    <span>- Emily Davis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & LOCATION SECTION -->
+    <section id="contact-location" class="contact-location">
+        <div class="container">
+            <h2>Find Us & Get In Touch</h2>
+
+            <!-- MIDDLE ROW: Map & Contact Details -->
+            <div class="location-info">
+                <!-- LEFT: Map -->
+                <div class="map-container">
+                    <div class="sphere-container">
+                        <!-- 3D Sphere Background -->
+                        <div class="sphere-bg">
+                            <div class="sphere-shadow"></div>
+                            <div class="sphere-glow"></div>
+                        </div>
+
+                        <!-- Grid Lines -->
+                        <div class="grid-lines">
+                            <div class="latitude-line lat-1"></div>
+                            <div class="latitude-line lat-2"></div>
+                            <div class="longitude-line lon-1"></div>
+                            <div class="longitude-line lon-2"></div>
+                            <div class="longitude-line lon-3"></div>
+                        </div>
+
+                        <!-- Central Location Marker -->
+                        <div class="location-marker">
+                            <div class="marker-pin">
+                                <div class="pin-head"></div>
+                                <div class="pin-stem"></div>
+                                <div class="pin-shadow"></div>
+                            </div>
+                            <div class="location-label">
+                                <span class="location-name">VERVE HUB</span>
+                                <span class="coordinates">40.7128° N, 74.0060° W</span>
+                            </div>
+                        </div>
+
+                        <!-- Transportation Icons (Orbiting) -->
+                        <div class="transportation-orbit">
+                            <div class="transport-icon subway" data-transport="subway" data-tooltip="Subway: A/C/E - 2 min walk">
+                                <span class="icon">🚇</span>
+                            </div>
+                            <div class="transport-icon parking" data-transport="parking" data-tooltip="Parking: $15/day - EV charging">
+                                <span class="icon">🅿️</span>
+                            </div>
+                            <div class="transport-icon walking" data-transport="walking" data-tooltip="Walking: 5 min from station">
+                                <span class="icon">🚶</span>
+                            </div>
+                            <div class="transport-icon biking" data-transport="biking" data-tooltip="Biking: Bike lanes available">
+                                <span class="icon">🚴</span>
+                            </div>
+                        </div>
+
+                        <!-- Integrated Controls -->
+                        <div class="sphere-controls">
+                            <button class="control-btn zoom-in" title="Zoom In">+</button>
+                            <button class="control-btn zoom-out" title="Zoom Out">-</button>
+                            <button class="control-btn compass" title="Compass">🧭</button>
+                            <button class="control-btn view-toggle" title="Toggle 2D/3D">🌐</button>
+                            <button class="control-btn fullscreen" title="Fullscreen">⛶</button>
+                        </div>
+
+                        <!-- Information Overlay -->
+                        <div class="info-overlay">
+                            <div class="overlay-content">
+                                <h4>🏢 Verve Hub Location</h4>
+                                <p><strong>Address:</strong> 123 Fitness Boulevard<br>Wellness District, NY 10001</p>
+                                <p><strong>Hours:</strong> 5:00 AM - 11:00 PM</p>
+                                <p><strong>Phone:</strong> (555) 123-4567</p>
+                                <button class="directions-btn">Get Directions</button>
+                            </div>
+                        </div>
+
+                        <!-- Loading Animation -->
+                        <div class="sphere-loading">
+                            <div class="loading-dots">
+                                <div class="dot dot-1"></div>
+                                <div class="dot dot-2"></div>
+                                <div class="dot dot-3"></div>
+                                <div class="dot dot-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Contact Details -->
+                <div class="contact-details">
+                    <div class="detail-card">
+                        <h4>📍 Address</h4>
+                        <p>123 Fitness Boulevard<br>Wellness District, NY 10001</p>
+                        <button class="copy-btn" onclick="copyToClipboard('123 Fitness Boulevard, Wellness District, NY 10001')">Copy Address</button>
+                    </div>
+
+                    <div class="detail-card">
+                        <h4>📞 Phone</h4>
+                        <p><strong>Main:</strong> (555) 123-4567</p>
+                        <p><strong>Emergency:</strong> (555) 911-HELP</p>
+                        <div class="phone-links">
+                            <a href="tel:+15551234567" class="phone-link">Call Main</a>
+                            <a href="tel:+15559117857" class="phone-link">Call Emergency</a>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <h4>✉️ Email</h4>
+                        <p>info@vervehub.com</p>
+                        <a href="mailto:info@vervehub.com" class="email-link">Send Email</a>
+                    </div>
+
+                    <div class="detail-card">
+                        <h4>🕒 Hours</h4>
+                        <div class="hours-list">
+                            <div class="hour-item"><span class="day">Mon-Thu:</span> <span class="time">5:00 AM - 11:00 PM</span></div>
+                            <div class="hour-item"><span class="day">Friday:</span> <span class="time">5:00 AM - 12:00 AM</span></div>
+                            <div class="hour-item"><span class="day">Saturday:</span> <span class="time">6:00 AM - 12:00 AM</span></div>
+                            <div class="hour-item"><span class="day">Sunday:</span> <span class="time">7:00 AM - 10:00 PM</span></div>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <h4>🌐 Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">📘 Facebook</a>
+                            <a href="#" class="social-link">📷 Instagram</a>
+                            <a href="#" class="social-link">🐦 Twitter</a>
+                            <a href="#" class="social-link">💼 LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM ROW: Transportation -->
+            <div class="transportation-section">
+                <h3>Getting Here</h3>
+                <div class="transportation-grid">
+                    <div class="transport-card">
+                        <div class="transport-icon">🚇</div>
+                        <h4>Public Transit</h4>
+                        <p><strong>Subway:</strong> A/C/E lines - 2 min walk</p>
+                        <p><strong>Bus:</strong> M1, M2, M3 - Stop nearby</p>
+                        <p><strong>Walking:</strong> 5 min from Central Station</p>
+                    </div>
+
+                    <div class="transport-card">
+                        <div class="transport-icon">🅿️</div>
+                        <h4>Parking</h4>
+                        <p><strong>Daily Rate:</strong> $15/day</p>
+                        <p><strong>Validation:</strong> Available for members</p>
+                        <p><strong>EV Charging:</strong> 4 stations available</p>
+                    </div>
+
+                    <div class="transport-card">
+                        <div class="transport-icon">♿</div>
+                        <h4>Accessibility</h4>
+                        <p><strong>ADA Compliant:</strong> Full accessibility</p>
+                        <p><strong>Elevators:</strong> Main & service entrances</p>
+                        <p><strong>Wheelchair:</strong> Available at front desk</p>
+                    </div>
+
+                    <div class="transport-card">
+                        <div class="transport-icon">🏨</div>
+                        <h4>Nearby Amenities</h4>
+                        <p><strong>Hotels:</strong> 3 within 0.5 miles</p>
+                        <p><strong>Restaurants:</strong> 15+ dining options</p>
+                        <p><strong>Attractions:</strong> Central Park nearby</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM ROW: Contact Form -->
+            <div class="contact-form-section">
+                <h3>Send Us a Message</h3>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" name="subject" required>
+                                <option value="">Select Subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="membership">Membership</option>
+                                <option value="facilities">Facilities</option>
+                                <option value="events">Events</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loader" style="display: none;"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2026 Verve Hub. All rights reserved.</p>
+            <p>Contact us: info@vervehub.com | (123) 456-7890</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1096 @@
+/* Car Wash Page Styles */
+
+/* Car Wash Hero */
+.carwash-hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carwash-hero .hero-content {
+    text-align: center;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.carwash-hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.carwash-hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+}
+
+.carwash-hero .cta-primary {
+    background-color: #4A90E2;
+}
+
+.carwash-hero .cta-primary:hover {
+    background-color: #357ABD;
+}
+
+.carwash-hero .cta-secondary {
+    border-color: #4A90E2;
+    color: #4A90E2;
+}
+
+.carwash-hero .cta-secondary:hover {
+    background-color: #4A90E2;
+    color: #ffffff;
+}
+
+/* Car Wash Packages */
+.carwash-packages {
+    padding: 5rem 2rem;
+    background-color: #2c2c2c;
+}
+
+.carwash-packages h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+.package-card {
+    background-color: #3a3a3a;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.package-card.popular {
+    border: 3px solid #4A90E2;
+    transform: scale(1.05);
+}
+
+.package-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #4A90E2;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.time {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.package-card ul {
+    list-style: none;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.package-card li {
+    padding: 0.5rem 0;
+    color: #cccccc;
+    border-bottom: 1px solid #555;
+}
+
+.package-btn {
+    display: inline-block;
+    background-color: #4A90E2;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.package-btn:hover {
+    background-color: #357ABD;
+}
+
+.add-ons {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.add-ons h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.addon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3a3a3a;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.addon-name {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.addon-price {
+    color: #4A90E2;
+    font-weight: 600;
+}
+
+/* Car Wash Process */
+.carwash-process {
+    padding: 5rem 2rem;
+    background-color: #1a1a1a;
+}
+
+.carwash-process h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.timeline-item {
+    text-align: center;
+    max-width: 150px;
+}
+
+.timeline-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #4A90E2;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+}
+
+.timeline-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #4A90E2;
+}
+
+.timeline-item p {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.timeline-connector {
+    width: 50px;
+    height: 2px;
+    background-color: #4A90E2;
+}
+
+.process-summary {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #3a3a3a;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.process-summary p {
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+/* Car Wash Wait */
+.carwash-wait {
+    padding: 5rem 2rem;
+    background-color: #2c2c2c;
+}
+
+.carwash-wait h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.carwash-wait > p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #cccccc;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.facility-link {
+    background-color: #3a3a3a;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.facility-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 2px solid #4A90E2;
+}
+
+.facility-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.facility-link h4 {
+    color: #4A90E2;
+    margin-bottom: 0.5rem;
+}
+
+.facility-link p {
+    color: #cccccc;
+}
+
+/* Car Wash Eco */
+.carwash-eco {
+    padding: 5rem 2rem;
+    background-color: #1a1a1a;
+}
+
+.carwash-eco h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+}
+
+.eco-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+.eco-feature {
+    background-color: #3a3a3a;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.eco-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.eco-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.eco-feature h4 {
+    color: #4A90E2;
+    margin-bottom: 1rem;
+}
+
+.eco-feature p {
+    color: #cccccc;
+}
+
+.certifications {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cert-badge {
+    background-color: #4A90E2;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Car Wash Booking */
+.carwash-booking {
+    padding: 5rem 2rem;
+    background-color: #2c2c2c;
+}
+
+.carwash-booking h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+}
+
+.booking-widget {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.booking-form {
+    background-color: #3a3a3a;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    outline: none;
+    border: 2px solid #4A90E2;
+}
+
+.booking-btn {
+    width: 100%;
+    background-color: #4A90E2;
+    color: #ffffff;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.booking-btn:hover {
+    background-color: #357ABD;
+}
+
+.booking-info {
+    background-color: #4A90E2;
+    padding: 2rem;
+    border-radius: 12px;
+    color: #ffffff;
+}
+
+.booking-info h3 {
+    margin-bottom: 1rem;
+}
+
+.booking-info ul {
+    list-style: none;
+}
+
+.booking-info li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* CAR WASH GALLERY */
+.carwash-gallery {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.carwash-gallery h2 {
+    color: #4A90E2;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title-accent {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #4A90E2, #357ABD);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 10px;
+}
+
+.toggle-btn {
+    background: rgba(74, 144, 226, 0.1);
+    color: #4A90E2;
+    border: 2px solid #4A90E2;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.toggle-btn:hover,
+.toggle-btn.active {
+    background: #4A90E2;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+}
+
+.filter-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    background: rgba(74, 144, 226, 0.1);
+    color: #4A90E2;
+    border: 2px solid #4A90E2;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #4A90E2;
+    color: white;
+}
+
+.gallery-content {
+    display: none;
+}
+
+.gallery-content.active {
+    display: block;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    aspect-ratio: 4/3;
+    border: 3px solid transparent;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    border-color: #4A90E2;
+    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    filter: brightness(0.9);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3));
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.service-tags {
+    margin-bottom: 8px;
+}
+
+.tag {
+    background: #4A90E2;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.timestamp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Before/After Slider Styles */
+.before-after-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.before-image,
+.after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.after-image {
+    clip-path: inset(0 0 0 50%);
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: #4A90E2;
+    cursor: ew-resize;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.slider-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background: #4A90E2;
+    border: 3px solid white;
+    border-radius: 50%;
+    cursor: ew-resize;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Slider Showcase View */
+.slider-showcase {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main-slider {
+    background: #3a3a3a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.slider-container {
+    position: relative;
+    height: 400px;
+    cursor: ew-resize;
+}
+
+.slider-info {
+    padding: 25px;
+    background: #2c2c2c;
+    text-align: center;
+}
+
+.slider-info h3 {
+    color: #4A90E2;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.slider-info p {
+    color: #cccccc;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.slider-nav button {
+    background: #4A90E2;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-nav button:hover {
+    background: #357ABD;
+    transform: scale(1.1);
+}
+
+/* Responsive Gallery */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .gallery-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .view-toggle,
+    .filter-controls {
+        justify-content: center;
+    }
+
+    .slider-container {
+        height: 300px;
+    }
+
+    .carwash-gallery h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .gallery-item {
+        aspect-ratio: 3/2;
+    }
+
+    .view-toggle {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .toggle-btn {
+        flex: 1;
+        text-align: center;
+    }
+
+    .filter-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .slider-nav button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+/* CAR WASH LIGHTBOX */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 5% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.lightbox-close:hover {
+    color: #4A90E2;
+}
+
+.lightbox-info {
+    position: absolute;
+    bottom: -140px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.lightbox-title {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4A90E2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lightbox-description {
+    margin: 0 0 15px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+}
+
+.lightbox-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.detail-value {
+    color: white;
+    font-weight: 500;
+}
+
+.lightbox-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    background: #4A90E2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+    font-size: 0.9rem;
+}
+
+.share-btn:hover {
+    background: #357ABD;
+}
+
+.download-btn {
+    background: #2E8B57;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+    font-size: 0.9rem;
+}
+
+.download-btn:hover {
+    background: #1a5a2e;
+}
+
+/* Responsive Design Updates */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin-left: 1rem;
+    }
+
+    .services {
+        padding: 3rem 1rem;
+    }
+
+    .services h2 {
+        font-size: 2rem;
+    }
+
+    .why-choose-us {
+        padding: 3rem 1rem;
+    }
+
+    .why-choose-us h2 {
+        font-size: 2rem;
+    }
+
+    .reviews {
+        padding: 3rem 1rem;
+    }
+
+    .reviews h2 {
+        font-size: 2rem;
+    }
+
+    /* Gym responsive */
+    .gym-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .gym-hero p {
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .membership-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .membership-card.popular {
+        transform: none;
+    }
+
+    .schedule-table {
+        font-size: 0.9rem;
+    }
+
+    .schedule-header {
+        grid-template-columns: 80px repeat(7, 1fr);
+    }
+
+    .schedule-row {
+        grid-template-columns: 80px repeat(7, 1fr);
+    }
+
+    .trainers-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trainer-card {
+        min-width: 100%;
+        max-width: 400px;
+    }
+
+    .gym-cta h2 {
+        font-size: 2rem;
+    }
+
+    /* Car Wash responsive */
+    .carwash-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .carwash-hero p {
+        font-size: 1.1rem;
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-card.popular {
+        transform: none;
+    }
+
+    .timeline {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .timeline-connector {
+        width: 2px;
+        height: 50px;
+    }
+
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .eco-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-widget {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
