@@ -68,7 +68,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('hero background.jpg');
+    background-image: url('../images/hero background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -237,103 +237,115 @@ nav ul li a:hover {
     border-color: #2E8B57;
 }
 
-/* VERVE HUB GALLERY */
+/* VERVE HUB GALLERY SLIDER */
 .verve-gallery {
     padding: 80px 0;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    position: relative;
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
+.verve-gallery h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.gallery-slider {
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    background: white;
-    border-radius: 8px;
+    border-radius: 16px;
     overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
-.gallery-item {
+.slider-wrapper {
     position: relative;
-    aspect-ratio: 1;
+    width: 100%;
+    height: 600px;
     overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
 }
 
-.gallery-item:hover {
-    transform: scale(1.02);
+.slider-track {
+    position: relative;
+    display: flex;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
 }
 
-.gallery-item:hover .gallery-overlay {
+.slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+}
+
+.slide.active {
     opacity: 1;
-    transform: translateY(0);
+    pointer-events: auto;
+    z-index: 2;
 }
 
-/* Service-specific hover borders */
-.gym-item:hover {
-    border-color: #FF6B35;
-}
-
-.carwash-item:hover {
-    border-color: #4A90E2;
-}
-
-.restaurant-item:hover {
-    border-color: #2E8B57;
-}
-
-.gaming-item:hover {
-    border-color: #9B5DE5;
-}
-
-.lobby-item:hover {
-    border-color: #FF6B35;
-}
-
-.community-item:hover {
-    border-color: #FF6B35;
-}
-
-.gallery-image {
+.slide-image {
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: all 0.3s ease;
-    filter: brightness(1);
+    transition: transform 0.6s ease;
 }
 
-.gallery-item:hover .gallery-image {
-    filter: brightness(0.8);
+.slide.active .slide-image {
+    transform: scale(1);
 }
 
-.gallery-overlay {
+.slide-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
-    padding: 20px;
-    opacity: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+    padding: 60px 40px 40px;
     transform: translateY(20px);
-    transition: all 0.3s ease;
-    text-align: center;
+    transition: transform 0.6s ease;
+}
+
+.slide.active .slide-overlay {
+    transform: translateY(0);
+}
+
+.slide-content {
+    max-width: 600px;
 }
 
 .service-name {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 600;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Service-specific accent colors for text */
+.slide-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Service-specific accent colors */
 .gym-item .service-name {
     color: #FF6B35;
 }
@@ -358,30 +370,80 @@ nav ul li a:hover {
     color: #FF6B35;
 }
 
-.verve-gallery h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+/* Slider Navigation Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
     color: #ffffff;
 }
 
-/* Responsive Gallery */
-@media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2px;
-    }
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%) scale(1.1);
 }
 
-@media (max-width: 480px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 2px;
-    }
+.slider-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
 
-    .verve-gallery {
-        padding: 60px 0;
-    }
+.slider-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.prev-btn {
+    left: 24px;
+}
+
+.next-btn {
+    right: 24px;
+}
+
+/* Slider Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.slider-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.slider-dots .dot:hover {
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(1.2);
+}
+
+.slider-dots .dot.active {
+    background: #ffffff;
+    width: 32px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 /* Why Choose Us Section */

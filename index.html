@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verve Hub is a modern multipurpose commercial building featuring a gym, car wash, gaming area, and restaurant all under one roof.">
+
     <title>Multipurpose Commercial Building</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css?v=3">
+    <link rel="stylesheet" href="assets/css/index.css?v=3">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <div class="logo">Verve Hub</div>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -27,7 +33,7 @@
         <div class="hero-content">
             <h1>Welcome to Verve Hub</h1>
             <p>Experience convenience and entertainment in one place. Gym, car wash, gaming area, and restaurant all under one roof.</p>
-            <a href="#services" class="cta-button">Explore Services</a>
+            <a href="#services" class="cta-button" aria label="Explore available Services">Explore Services</a>
         </div>
     </section>
 
@@ -40,72 +46,129 @@
                     <div class="service-icon">🏋️</div>
                     <h3>Gym</h3>
                     <p>State-of-the-art fitness equipment and personal training services to help you achieve your health goals.</p>
-                    <a href="gym.html" class="view-details">View Details</a>
+                    <a href="services/gym.html" class="view-details">View Details</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🚗</div>
                     <h3>Car Wash</h3>
                     <p>Professional car cleaning services with eco-friendly products for a spotless finish.</p>
-                    <a href="carwash.html" class="view-details">View Details</a>
+                    <a href="services/carwash.html" class="view-details">View Details</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🎮</div>
                     <h3>Gaming Area</h3>
                     <p>Latest gaming consoles and VR experiences for an immersive entertainment hub.</p>
-                    <a href="gaming.html" class="view-details">View Details</a>
+                    <a href="services/gaming.html" class="view-details">View Details</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🍽️</div>
                     <h3>Restaurant</h3>
                     <p>Delicious cuisine from around the world, perfect for dining after your workout or gaming session.</p>
-                    <a href="restaurant.html" class="view-details">View Details</a>
+                    <a href="services/restaurant.html" class="view-details">View Details</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- VERVE HUB GALLERY -->
-    <section class="verve-gallery">
+    <!-- VERVE HUB GALLERY SLIDER -->
+    <section class="verve-gallery" id="gallery">
         <div class="container">
             <h2>Explore Our Facilities</h2>
-            <div class="gallery-grid">
-                <!-- TOP ROW -->
-                <div class="gallery-item gym-item" data-service="Gym">
-                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=center')"></div>
-                    <div class="gallery-overlay">
-                        <span class="service-name">Gym</span>
+            <div class="gallery-slider">
+                <div class="slider-wrapper">
+                    <div class="slider-track" role="list">
+                        <div class="slide gym-item" role ="listitem" data-service="gym">
+                            <div 
+                                class="slide-image"
+                                data-bg="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b">
+                            
+                            </div>
+                            <div class="slide-overlay">
+                                <div class="slide-content">
+                                    <span class="service-name">Gym</span>
+                                    <p class="slide-description">State-of-the-art fitness equipment and training facilities</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide carwash-item" role="listitem" data-service="carwash">
+                            <div 
+                                class="slide-image"
+                                data-bg="assets/images/gallery/gym.jpg">
+                            </div>
+                            <div class="slide-overlay">
+                                <div class="slide-content">
+                                    <span class="service-name">Car Wash</span>
+                                    <p class="slide-description">Professional car cleaning services with eco-friendly products</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide restaurant-item" role="listitem" data-service="restaurant">
+                            <div 
+                                class="slide-image"
+                                data-bg="assets/images/gallery/gym.jpg">
+                            </div>
+                            <div class="slide-overlay">
+                                <div class="slide-content">
+                                    <span class="service-name">Restaurant</span>
+                                    <p class="slide-description">Delicious cuisine from around the world</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide gaming-item" role="listitem" data-service="gaming">
+                            <div 
+                                class="slide-image"
+                                data-bg="assets/images/gallery/gym.jpg">
+                            </div>
+                            <div class="slide-overlay">
+                                <div class="slide-content">
+                                    <span class="service-name">Gaming</span>
+                                    <p class="slide-description">Latest gaming consoles and VR experiences</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide lobby-item" role="listitem" data-service="lobby">
+                            <div 
+                                class="slide-image"
+                                data-bg="assets/images/gallery/gym.jpg">
+                            </div>
+                            <div class="slide-overlay">
+                                <div class="slide-content">
+                                    <span class="service-name">Lobby</span>
+                                    <p class="slide-description">Welcoming entrance with modern design</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide community-item" role="listitem" data-service="community">
+                            <div 
+                                class="slide-image"
+                                data-bg="assets/images/gallery/gym.jpg">
+                            </div>
+                            <div class="slide-overlay">
+                                <div class="slide-content">
+                                    <span class="service-name">Community</span>
+                                    <p class="slide-description">A vibrant space for connection and engagement</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="gallery-item carwash-item" data-service="Car Wash">
-                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=400&h=400&fit=crop&crop=center')"></div>
-                    <div class="gallery-overlay">
-                        <span class="service-name">Car Wash</span>
-                    </div>
-                </div>
-                <div class="gallery-item restaurant-item" data-service="Restaurant">
-                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=400&fit=crop&crop=center')"></div>
-                    <div class="gallery-overlay">
-                        <span class="service-name">Restaurant</span>
-                    </div>
-                </div>
-                <!-- BOTTOM ROW -->
-                <div class="gallery-item gaming-item" data-service="Gaming">
-                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=400&fit=crop&crop=center')"></div>
-                    <div class="gallery-overlay">
-                        <span class="service-name">Gaming</span>
-                    </div>
-                </div>
-                <div class="gallery-item lobby-item" data-service="Lobby">
-                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=400&fit=crop&crop=center')"></div>
-                    <div class="gallery-overlay">
-                        <span class="service-name">Lobby</span>
-                    </div>
-                </div>
-                <div class="gallery-item community-item" data-service="Community">
-                    <div class="gallery-image" style="background-image: url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&h=400&fit=crop&crop=center')"></div>
-                    <div class="gallery-overlay">
-                        <span class="service-name">Community</span>
-                    </div>
+                <button class="slider-btn prev-btn" aria-label="Previous slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="slider-btn next-btn" aria-label="Next slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                    <span class="dot" data-slide="5"></span>
                 </div>
             </div>
         </div>
@@ -253,7 +316,12 @@
                     <div class="detail-card">
                         <h4>📍 Address</h4>
                         <p>123 Fitness Boulevard<br>Wellness District, NY 10001</p>
-                        <button class="copy-btn" onclick="copyToClipboard('123 Fitness Boulevard, Wellness District, NY 10001')">Copy Address</button>
+                        <button 
+                            class="copy-btn" 
+                            data-copy="123 Fitness Boulevard, Wellness District, NY 10001">
+                            Copy Address
+                        </button>
+
                     </div>
 
                     <div class="detail-card">
@@ -300,7 +368,7 @@
             <!-- BOTTOM ROW: Contact Form -->
             <div class="contact-form-section">
                 <h3>Send Us a Message</h3>
-                <form class="contact-form">
+                <form class="contact-form" id="contactform">
                     <div class="form-row">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -322,9 +390,9 @@
                     <div class="form-group full-width">
                         <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">
+                    <button type="submit" class="submit-btn" aria-label="Send message">
                         <span class="btn-text">Send Message</span>
-                        <span class="btn-loader" style="display: none;"></span>
+                        <span class="btn-loader" id = "formloader" style="display: none;"></span>
                     </button>
                 </form>
             </div>
@@ -338,6 +406,5 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
