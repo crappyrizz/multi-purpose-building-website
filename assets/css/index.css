@@ -27,7 +27,7 @@ header {
     border-bottom: 1px solid #444444;
 }
 
-nav {
+nav { 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,6 +35,25 @@ nav {
     margin: 0 auto;
     padding: 0 2rem;
 }
+
+/* NAVBAR DEFAULT */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 24px 48px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* NAVBAR WHEN SCROLLED */
+.navbar.scrolled {
+    padding: 12px 48px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
 
 .logo {
     font-size: 1.5rem;
