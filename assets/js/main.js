@@ -212,3 +212,4 @@ const gallerySlider = document.querySelector(".gallery-slider");
 
 gallerySlider.addEventListener("mouseenter", stopAutoplay);
 gallerySlider.addEventListener("mouseleave", startAutoplay);
+

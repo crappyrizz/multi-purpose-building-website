@@ -7,25 +7,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/index.css?v=3">
     <link rel="stylesheet" href="../assets/css/gym.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="navbar">
+        <nav aria-label="Main navigation">
             <div class="logo">Verve Hub</div>
             <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#why-choose-us">Why Choose Us</a></li>
-                <li><a href="index.html#reviews">Reviews</a></li>
-                <li><a href="index.html#contact-location">Contact</a></li>
+                <li><a href="#ghome">Home</a></li>
+                <li><a href="#gfacilities">Facilities</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#ggallery">Gallery</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="gym-hero">
+    <section id="ghome" class="gym-hero">
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1>PREMIUM FITNESS EXPERIENCE</h1>
@@ -39,7 +39,7 @@
     </section>
 
     <!-- FEATURES GRID -->
-    <section class="gym-features">
+    <section  id="gfacilities" class="gym-features">
         <div class="container">
             <h2>Our Facilities</h2>
             <div class="features-grid">
@@ -78,7 +78,7 @@
     </section>
 
     <!-- MEMBERSHIP TIERS -->
-    <section id="membership" class="gym-membership">
+    <section id="plans" class="gym-membership">
         <div class="container">
             <h2>Membership Plans</h2>
             <div class="membership-grid">
@@ -120,7 +120,7 @@
     </section>
 
     <!-- SCHEDULE/TIMETABLE -->
-    <section class="gym-schedule">
+    <section id="schedule" class="gym-schedule">
         <div class="container">
             <h2>Class Schedule</h2>
             <div class="schedule-filters">
@@ -189,7 +189,7 @@
     </section>
 
     <!-- TRAINER PROFILES -->
-    <section class="gym-trainers">
+    <section id="trainers" class="gym-trainers">
         <div class="container">
             <h2>Meet Our Trainers</h2>
             <div class="trainers-carousel">
@@ -247,7 +247,7 @@
     </section>
 
     <!-- GYM GALLERY -->
-    <section class="gym-gallery">
+    <section id="ggallery" class="gym-gallery">
         <div class="container">
             <div class="gallery-header">
                 <h2>Our Fitness Facility</h2>
@@ -406,6 +406,7 @@
             <p>Contact us: info@multibuild.com | (123) 456-7890</p>
         </div>
     </footer>
+    <script src="assets/js/main.js"></script>
 
     <script src="script.js"></script>
 </body>
