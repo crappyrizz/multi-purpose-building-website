@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('carwash background.jpg');
+    background-image: url('../images/carwash background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,24 +14,22 @@
     padding: 0 2rem;
 }
 
-.carwash-hero .hero-content {
-    text-align: center;
-    z-index: 2;
-    max-width: 800px;
-    padding: 0 2rem;
-}
 
-.carwash-hero h1 {
-    font-size: 4rem;
+
+.carwash-hero-content h1 {
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.carwash-hero p {
-    font-size: 1.4rem;
+.carwash-hero-content p {
+    font-size: 1.2rem;
     margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
     color: #e0e0e0;
 }
 
