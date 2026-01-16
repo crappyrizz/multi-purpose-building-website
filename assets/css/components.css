@@ -1,0 +1,102 @@
+/* Shared Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar Styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(26, 26, 26, 0.95);
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 1px solid #444444;
+}
+
+nav { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* NAVBAR DEFAULT */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 24px 48px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* NAVBAR WHEN SCROLLED */
+.navbar.scrolled {
+    padding: 12px 48px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FF6B35;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FF6B35;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin-left: 1rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    color: #b0b0b0;
+}
+
+footer a{
+    color: #E55A2B;
+}
+
