@@ -1,11 +1,5 @@
-/* Shared Utility Classes */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 /* Navbar Styles */
-header {
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -13,6 +7,7 @@ header {
     z-index: 1000;
     padding: 1rem 0;
     border-bottom: 1px solid #444444;
+    transition: all 0.3s ease;
 }
 
 nav { 
@@ -24,19 +19,9 @@ nav {
     padding: 0 2rem;
 }
 
-/* NAVBAR DEFAULT */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 24px 48px;
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
-
 /* NAVBAR WHEN SCROLLED */
 .navbar.scrolled {
-    padding: 12px 48px;
+    padding: 0.5rem 0;
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
