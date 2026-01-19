@@ -208,11 +208,13 @@ footer a{
 /* Lazy Loading Styles */
 img.lazy {
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.6s ease-in-out, transform 0.3s ease;
+    transform: scale(0.95);
 }
 
 img.lazy.loaded {
     opacity: 1;
+    transform: scale(1);
 }
 
 img.lazy:not([src]) {
@@ -224,6 +226,15 @@ img.lazy:not([src]) {
     animation: shimmer 1.5s infinite linear;
 }
 
+/* Background Image Lazy Loading */
+[data-bg] {
+    transition: background-image 0.6s ease-in-out;
+}
+
+[data-bg].bg-loaded {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
 @keyframes shimmer {
     0% {
         background-position: 0 0, 10px 10px;
@@ -231,5 +242,33 @@ img.lazy:not([src]) {
     100% {
         background-position: 20px 20px, 30px 30px;
     }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Image Optimization Classes */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.img-contain {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 

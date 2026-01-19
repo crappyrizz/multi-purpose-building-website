@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ===== LAZY LOADING =====
     initLazyLoading();
+    initBackgroundLazyLoading();
 
     // ===== GALLERY SLIDER =====
     initGallerySlider();
@@ -67,13 +68,27 @@ function initLazyLoading() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    observer.unobserve(img);
+                    
+                    // Create new image to preload
+                    const newImg = new Image();
+                    newImg.onload = () => {
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded');
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    };
+                    newImg.onerror = () => {
+                        // Fallback to original if optimized fails
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded');
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    };
+                    newImg.src = img.dataset.src;
                 }
             });
         }, {
-            rootMargin: '50px 0px',
+            rootMargin: '100px 0px', // Load 100px before entering viewport
             threshold: 0.01
         });
 
@@ -86,6 +101,43 @@ function initLazyLoading() {
         images.forEach(img => {
             img.src = img.dataset.src;
             img.classList.remove('lazy');
+        });
+    }
+}
+
+// Background Image Lazy Loading
+function initBackgroundLazyLoading() {
+    const bgElements = document.querySelectorAll('[data-bg]');
+    
+    if ('IntersectionObserver' in window) {
+        const bgObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    const bgUrl = element.dataset.bg;
+                    
+                    // Preload background image
+                    const img = new Image();
+                    img.onload = () => {
+                        element.style.backgroundImage = `url('${bgUrl}')`;
+                        element.classList.add('bg-loaded');
+                        observer.unobserve(element);
+                    };
+                    img.src = bgUrl;
+                }
+            });
+        }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+        });
+
+        bgElements.forEach(element => {
+            bgObserver.observe(element);
+        });
+    } else {
+        // Fallback
+        bgElements.forEach(element => {
+            element.style.backgroundImage = `url('${element.dataset.bg}')`;
         });
     }
 }
