@@ -2,6 +2,7 @@
 
 /* Header */
 
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -12,6 +13,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
     text-align: center;
     padding: 0 2rem;
 }

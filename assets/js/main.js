@@ -110,6 +110,7 @@ function initBackgroundLazyLoading() {
     const bgElements = document.querySelectorAll('[data-bg]');
     console.log('🔍 Found background elements:', bgElements.length);
     
+    // Use IntersectionObserver for all background images (excluding CSS-based heroes)
     if ('IntersectionObserver' in window) {
         const bgObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -117,7 +118,7 @@ function initBackgroundLazyLoading() {
                     const element = entry.target;
                     const bgUrl = element.dataset.bg;
                     
-                    console.log('🎯 Loading background:', bgUrl);
+                    console.log('🎯 Loading background on scroll:', bgUrl);
                     
                     // Preload background image
                     const img = new Image();

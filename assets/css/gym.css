@@ -28,6 +28,7 @@ h1, h2, h3 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
     text-align: center;
     padding: 0 2rem;
 }
