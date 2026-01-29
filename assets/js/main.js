@@ -108,6 +108,7 @@ function initLazyLoading() {
 // Background Image Lazy Loading
 function initBackgroundLazyLoading() {
     const bgElements = document.querySelectorAll('[data-bg]');
+    console.log('🔍 Found background elements:', bgElements.length);
     
     if ('IntersectionObserver' in window) {
         const bgObserver = new IntersectionObserver((entries, observer) => {
@@ -116,12 +117,33 @@ function initBackgroundLazyLoading() {
                     const element = entry.target;
                     const bgUrl = element.dataset.bg;
                     
+                    console.log('🎯 Loading background:', bgUrl);
+                    
                     // Preload background image
                     const img = new Image();
                     img.onload = () => {
                         element.style.backgroundImage = `url('${bgUrl}')`;
                         element.classList.add('bg-loaded');
+                        console.log('✅ Background loaded:', bgUrl);
                         observer.unobserve(element);
+                    };
+                    img.onerror = () => {
+                        console.error('❌ Failed to load background:', bgUrl);
+                        // Try alternative path
+                        const altBg = bgUrl.startsWith('./') ? bgUrl.substring(2) : './' + bgUrl;
+                        console.log('🔄 Trying alternative background path:', altBg);
+                        const altImg = new Image();
+                        altImg.onload = () => {
+                            element.style.backgroundImage = `url('${altBg}')`;
+                            element.classList.add('bg-loaded');
+                            console.log('✅ Alternative background worked:', altBg);
+                            observer.unobserve(element);
+                        };
+                        altImg.onerror = () => {
+                            console.error('❌ Both background paths failed:', bgUrl);
+                            observer.unobserve(element);
+                        };
+                        altImg.src = altBg;
                     };
                     img.src = bgUrl;
                 }
@@ -151,15 +173,45 @@ function initGallerySlider() {
     
     if (!sliderTrack) return; // Exit if no slider exists
 
-    // Apply slide background images from data-bg attributes
+    // Apply slide background images using lazy loading system
     const slideImages = document.querySelectorAll(".slide-image[data-bg]");
     slideImages.forEach(el => {
         const bg = el.getAttribute("data-bg");
         if (!bg) return;
-        el.style.backgroundImage = `url("${bg}")`;
-        el.style.backgroundSize = "cover";
-        el.style.backgroundPosition = "center";
-        el.style.backgroundRepeat = "no-repeat";
+        
+        // Add lazy loading classes
+        el.classList.add('lazy-bg');
+        
+        // Preload critical slider images immediately
+        const img = new Image();
+        img.onload = () => {
+            el.style.backgroundImage = `url("${bg}")`;
+            el.style.backgroundSize = "cover";
+            el.style.backgroundPosition = "center";
+            el.style.backgroundRepeat = "no-repeat";
+            el.classList.add('bg-loaded');
+            console.log('✅ Image loaded successfully:', bg);
+        };
+        img.onerror = () => {
+            console.error('❌ Failed to load image:', bg);
+            // Try alternative path for GitHub Pages
+            const altBg = bg.startsWith('./') ? bg.substring(2) : './' + bg;
+            console.log('🔄 Trying alternative path:', altBg);
+            const altImg = new Image();
+            altImg.onload = () => {
+                el.style.backgroundImage = `url("${altBg}")`;
+                el.style.backgroundSize = "cover";
+                el.style.backgroundPosition = "center";
+                el.style.backgroundRepeat = "no-repeat";
+                el.classList.add('bg-loaded');
+                console.log('✅ Alternative path worked:', altBg);
+            };
+            altImg.onerror = () => {
+                console.error('❌ Both paths failed for:', bg);
+            };
+            altImg.src = altBg;
+        };
+        img.src = bg;
     });
 
     // ===== Infinite loop setup (clone first & last) =====
