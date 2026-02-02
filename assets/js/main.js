@@ -110,39 +110,8 @@ function initBackgroundLazyLoading() {
     const bgElements = document.querySelectorAll('[data-bg]');
     console.log('🔍 Found background elements:', bgElements.length);
     
-    // Load hero backgrounds immediately
-    const heroElements = document.querySelectorAll('[data-bg].gym-hero, [data-bg].gaming-hero, [data-bg].restaurant-hero, [data-bg].carwash-hero, [data-bg].hero');
-    console.log('🚀 Loading hero backgrounds immediately:', heroElements.length);
-    
-    heroElements.forEach(element => {
-        const bgUrl = element.dataset.bg;
-        console.log('🎯 Loading hero background immediately:', bgUrl);
-        
-        const img = new Image();
-        img.onload = () => {
-            element.style.backgroundImage = `url('${bgUrl}')`;
-            element.style.backgroundSize = 'cover';
-            element.style.backgroundPosition = 'center';
-            element.style.backgroundRepeat = 'no-repeat';
-            element.classList.add('bg-loaded');
-            console.log('✅ Hero background loaded:', bgUrl);
-        };
-        img.onerror = () => {
-            console.error('❌ Failed to load hero background:', bgUrl);
-        };
-        img.src = bgUrl;
-    });
-    
-    // Use IntersectionObserver for other background images
-    const otherBgElements = Array.from(bgElements).filter(el => 
-        !el.classList.contains('gym-hero') && 
-        !el.classList.contains('gaming-hero') && 
-        !el.classList.contains('restaurant-hero') && 
-        !el.classList.contains('carwash-hero') && 
-        !el.classList.contains('hero')
-    );
-    
-    if (otherBgElements.length > 0 && 'IntersectionObserver' in window) {
+    // Use IntersectionObserver for all background images (excluding CSS-based heroes)
+    if ('IntersectionObserver' in window) {
         const bgObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -161,7 +130,21 @@ function initBackgroundLazyLoading() {
                     };
                     img.onerror = () => {
                         console.error('❌ Failed to load background:', bgUrl);
-                        observer.unobserve(element);
+                        // Try alternative path
+                        const altBg = bgUrl.startsWith('./') ? bgUrl.substring(2) : './' + bgUrl;
+                        console.log('🔄 Trying alternative background path:', altBg);
+                        const altImg = new Image();
+                        altImg.onload = () => {
+                            element.style.backgroundImage = `url('${altBg}')`;
+                            element.classList.add('bg-loaded');
+                            console.log('✅ Alternative background worked:', altBg);
+                            observer.unobserve(element);
+                        };
+                        altImg.onerror = () => {
+                            console.error('❌ Both background paths failed:', bgUrl);
+                            observer.unobserve(element);
+                        };
+                        altImg.src = altBg;
                     };
                     img.src = bgUrl;
                 }
@@ -171,12 +154,12 @@ function initBackgroundLazyLoading() {
             threshold: 0.01
         });
 
-        otherBgElements.forEach(element => {
+        bgElements.forEach(element => {
             bgObserver.observe(element);
         });
     } else {
         // Fallback
-        otherBgElements.forEach(element => {
+        bgElements.forEach(element => {
             element.style.backgroundImage = `url('${element.dataset.bg}')`;
         });
     }
